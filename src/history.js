@@ -340,7 +340,7 @@ function histTransaction(history, state, dispatch, redo) {
                                                                   histOptions, preserveItems)
 
   let newHist = new HistoryState(redo ? added : pop.remaining, redo ? pop.remaining : added, null, 0)
-  dispatch(pop.transform.setSelection(selection).setMeta(historyKey, {redo, historyState: newHist}).scrollIntoView())
+  dispatch(pop.transform.setSelection(selection).setMeta(historyKey, {redo, historyState: newHist}))
 }
 
 let cachedPreserveItems = false, cachedPreserveItemsPlugins = null
